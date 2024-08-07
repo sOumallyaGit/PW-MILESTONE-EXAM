@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Highlighting</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p id="paragraph">JavaScript is a versatile language that allows you to build dynamic web applications.</p>
+
+  <script>
+    const paragraph = document.getElementById('paragraph');
+    const words = paragraph.textContent.split(' ');
+    paragraph.innerHTML = words.map(word => {
+      return word.length > 8 ? `<span class="highlight">${word}</span>` : word;
+    }).join(' ');
+  </script>
+</body>
+</html>

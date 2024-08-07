@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Text on Button Click</title>
+</head>
+<body>
+  <h1 id="heading">The most affordable learning platform</h1>
+  <button id="toggleButton">Toggle Text</button>
+
+  <script>
+    const heading = document.getElementById('heading');
+    const button = document.getElementById('toggleButton');
+
+    button.addEventListener('click', () => {
+      if (heading.textContent === 'The most affordable learning platform') {
+        heading.textContent = 'PW Skills';
+      } else {
+        heading.textContent = 'The most affordable learning platform';
+      }
+    });
+  </script>
+</body>
+</html>

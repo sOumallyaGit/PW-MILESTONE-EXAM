@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Color on Click</title>
+</head>
+<body>
+  <button id="colorButton">Change Color</button>
+
+  <script>
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A8', '#FF8C33'];
+    document.getElementById('colorButton').addEventListener('click', function() {
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
